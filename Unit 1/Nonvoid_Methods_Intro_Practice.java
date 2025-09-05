@@ -13,11 +13,11 @@ public class TestExample {
 		  System.out.println(giveBestFriend());
 		  System.out.println(giveFavoriteFood());
 		  System.out.println(getCircleStats(4.2));
-		  System.out.println(getSum(2,5));
-		  System.out.println(getDifference(2,5));
-		  System.out.println(getProduct(2,5));
-		  System.out.println(getQuotient(2,5));
-		  System.out.println(getRemainder(2,5));
+		  System.out.println("The sum is " + getSum(2,5));
+		  System.out.println("The difference is " + getDifference(2,5));
+		  System.out.println("The product is " + getProduct(2,5));
+		  System.out.println("The quotient is " + getQuotient(2,5));
+		  System.out.println("The remainder is " + getRemainder(2,5));
 	/**
 	 * The next 5 methods are programmed to return info regarding certain facts about me,
 	 * specifically my name, eye color, hair style, best friends, and favorite food,
@@ -61,33 +61,28 @@ public class TestExample {
 	 * of two numbers that are stated in the main method and is
 	 * programmed to return the results to the main method
 	 */
-	public static String getSum(int x, int y) {
-		int sum = x + y ;
+	public static int getSum(int x, int y) {
 		
-		return "The sum of the two numbers is " + (sum);
+		return (x + y);
 		
 	}
-	public static String getDifference(int x, int y) {
-		int difference = y + x ;
+	public static int getDifference(int x, int y) {
 		
-		return "The difference of the two numbers is " + (difference);
+		return (x - y);
 	}
 	
-	public static String getProduct(int x, int y) {
-		int product = x * y ;
+	public static int getProduct(int x, int y) {
 
-		return "The product of the two numbers is " + (product);
+		return (x * y);
 	}
 	
-	public static String getQuotient(int x, int y) {
-		int quotient = x / y ;
+	public static int getQuotient(int x, int y) {
 
-		return "The quotient of the two numbers is " + (quotient);
+		return (x / y);
 	}
 	
-	public static String getRemainder(int x, int y) {
-		int remainder = x%y ;
+	public static int getRemainder(int x, int y) {
 		
-		return "The remainder of the two numbers is " + (remainder);
+		return (x%y);
 	}
 	}
