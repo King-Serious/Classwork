@@ -1,0 +1,32 @@
+/**
+ * This class does the thing
+ */
+
+public class Multiplication {
+
+	//This main method runs the multiply method with any two given int products and prints whatever the product of the two are
+	
+	public static void main(String[] ags) 
+	{
+		System.out.println(multiply(7,2));
+	}
+	
+	// This main method multiplies two integers without using the * symbol. First, c is assigned the value of a at the start.
+	// Then, as long as the value of b is greater than 1, the value of a will be added by the value of c (which is the original
+	// value of a) while b gets subtracted by one for each loop. Once the value of be is less than or equal to one, the code
+	// Returns the value of a, which should equate to the product of the original values of a and b.
+	
+	public static int multiply(int a, int b)
+	{
+		
+		int c = a;
+		
+		while (b > 1)
+		{
+			a += c;
+			b--;
+		}
+		return a;
+	}
+	
+}
