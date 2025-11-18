@@ -27,8 +27,8 @@ public static String getMonth(int n)
 				
 				return months.substring(0, sL);
 			}
-      			// Otherwise, the value of months increases to the next month
-				// and the for loop runs again for each month
+      			// Otherwise, the value of months moves to the next month and the previous month is cut off
+				// and the for loop runs again for each month until a match is found.
 				
 			else
 			{
