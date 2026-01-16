@@ -29,7 +29,7 @@ public class AlteringArrays {
 		}
 		for (int i = 0; i < copyNums.length; i++)
 		{
-			System.out.print(copyNums[i]);
+			System.out.print(copyNums[i] + ",");
 		}
 	}
 
