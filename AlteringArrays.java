@@ -9,28 +9,24 @@ public class AlteringArrays {
 	public static void main(String[] args) 
 	{
 		int[] nums = {5, 0, 8, 20};
-		subtract5FromAll4(nums);
+		for (int i = 0; i < nums.length; i++)
+		{
+			subtract5FromAll4(nums);
+			System.out.println(nums[i]);
+		}
 	}
 	
 	/*
 	 * This method creates a copy of the nums array with each value and subtracts all of the values of that copy by 5. Then,
-	 * the code prints out each new value of the array.
+	 * the code returns each new value of the array.
 	 */
-	public static void subtract5FromAll4(int[] tempNums)
+	public static int[] subtract5FromAll4(int[] tempNums)
 	{
-		int[] copyNums = new int[tempNums.length];
-		for (int i = 0; i < copyNums.length; i++)
+		for (int i = 0; i < tempNums.length; i++)
 		{
-			copyNums[i] = tempNums[i];
+			tempNums[i] = tempNums[i] - 5;
 		}
-		for (int i = 0; i < copyNums.length; i++)
-		{
-			copyNums[i] = copyNums[i] - 5;
-		}
-		for (int i = 0; i < copyNums.length; i++)
-		{
-			System.out.print(copyNums[i] + ",");
-		}
+		return tempNums;
 	}
 
 }
