@@ -1,5 +1,6 @@
 /**
- * This class contains two methods that replace all negative numbers in an array with 0 and changes the lowest number in an array to 0.
+ * This class contains three methods that check if the int value 4 is present in an array, how many times 4 shows up in an array,
+ * and if four 4s show up in an array.
  */
 public class AlteringArrays {
 
@@ -10,18 +11,26 @@ public class AlteringArrays {
 	 */
 	public static void main(String[] args) 
 	{
-		int[] nums = {8, 3, -2, -5, 7};
+		double[] nums = {8, 3, -2, -5, 7};
+		for (int i = 0; i < nums.length; i++)
+		{
 		noNegatives(nums);
+		System.out.println(nums[i]);	
+		}
 		System.out.println("");
 		int[] newNums = {3, 4, -9, 2, 6, 7};
-		dropLowest(newNums);
+		for (int i = 0; i < nums.length; i++)
+		{
+			dropLowest(newNums);
+			System.out.println(newNums[i]);
+		}
 	}
 	
 	/*
 	 * This method uses a for loop and if statement to check if each value in the given array is a negative or not. When the value is negative,
-	 * that value is changed to the value of 0 and then printed out. Otherwise, the value is regularly printed.
+	 * that value is changed to the value of 0 and then returned. Otherwise, the value is regularly returned.
 	 */
-	public static void noNegatives(int[] tempNums)
+	public static double[] noNegatives(double[] tempNums)
 	{
 		for (int i = 0; i < tempNums.length; i++)
 		{
@@ -29,8 +38,8 @@ public class AlteringArrays {
 			{
 				tempNums[i] = 0;
 			}
-			System.out.print(tempNums[i] + ", ");
 		}
+		return tempNums;
 		
 		/*
 		 * This method traverses a given array to identify the lowest number of the array and changing its value to 0.
@@ -41,7 +50,7 @@ public class AlteringArrays {
 		 * instead of its value being placed, a 0 replaces it to mark it as the lowest number.
 		 */
 	}
-	public static void dropLowest(int[] tempNums)
+	public static int[] dropLowest(int[] tempNums)
 	{
 		int lowestNumber = tempNums[0];
 		for (int i = 1; i < tempNums.length; i++)
@@ -55,10 +64,10 @@ public class AlteringArrays {
 		{
 			if (tempNums[j] == lowestNumber)
 			{
-				System.out.print(0 + ", ");
+				tempNums[j] = 0;
 			}
-			else System.out.print(tempNums[j] + ", ");
 		}
+		return tempNums;
 	}
 
 }
