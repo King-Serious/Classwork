@@ -8,7 +8,7 @@ public class AlteringArrays {
 	 */
 	public static void main(String[] args) 
 	{
-		int[] nums = {5, 0, 3, 20, 10};
+		int[] nums = {5, 1, 2, -27, 30000, 0, 3, 20, 10};
 		for (int i = 0; i < nums.length; i++)
 		{
 			bubbleSort(nums);
@@ -22,13 +22,16 @@ public class AlteringArrays {
 	 */
 	public static int[] bubbleSort(int[] tempNums)
 	{
-		for (int i = 0; i < tempNums.length-1; i++)
+		for (int tempe : tempNums)
 		{
-			int temp = tempNums[i];
-			if (tempNums[i+1] < tempNums[i])
+			for (int i = 0; i < tempNums.length-1; i++)
 			{
-				tempNums[i] = tempNums[i+1];
-				tempNums[i+1] = temp;
+				int temp = tempNums[i];
+				if (tempNums[i+1] < tempNums[i])
+				{
+					tempNums[i] = tempNums[i+1];
+					tempNums[i+1] = temp;
+				}
 			}
 		}
 		return tempNums;
